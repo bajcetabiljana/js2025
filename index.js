@@ -93,8 +93,8 @@ console.log(userName);
 
 //profetional way = html textbox
 
-let userName
-let header
+let userName;
+let header;
 document.getElementById("mySubmit").onclick = function(){
     userName = document.getElementById("myText").value;
     header = document.getElementById("h1").textContent = "Hello: " + userName;
@@ -123,4 +123,31 @@ console.log(x, typeof x);
 console.log(y, typeof y);
 console.log(z, typeof z);
 //ovako mozemo da proverimo da li je neko uneo neki podatak u User input, posto je boolean za empty varijablu uvek false
+
+//Konstante const = variables som can not be changed
+//zadatak: napravi program gde za izracunavanje obim kruga gde user unosi precnik kruga.
+
+const PI = 3.1415926;
+let radius;
+let circumference;
+
+//kad user ubacuje vrednost preko prompta onda on automatski uzima unetu vrednost...ali kada user unosi neki podatak preko inputa i submita onda je neophodno da bi izvukli koja je to uneta vrednost napisemo code...    userVrednost = document.getElementById("input").value;
+/*
+radius = window.prompt("Enter radius of the cirkel");
+radius = Number(radius);
+
+circumference = 2 * radius * pi;
+
+console.log(circumference);
+
+*/
+// Kad user ubacuje podatak preko inbox i submita
+
+let message;
+document.getElementById("sub").onclick = function(){
+    radius = document.getElementById("input").value;
+    radius = Number(radius);
+    circumference = 2 * radius * PI;
+    message = document.getElementById("circelResult").textContent = "Circumference of the circel is:" + circumference;
+};
 
