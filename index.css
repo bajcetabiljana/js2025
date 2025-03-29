@@ -25,3 +25,21 @@ button {
     height: 30px;
     letter-spacing: 3px;
 }
+
+#count {
+    text-align: center;
+}
+#count button {
+   border-radius: 50%;
+   border: 2px solid red; 
+   box-sizing: content-box;
+   padding: 10px;
+}
+
+#count button:hover {
+    background-color: black;
+    color: white;
+}
+#count label {
+    font-size: 60px;
+}

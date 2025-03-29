@@ -29,6 +29,8 @@ document.getElementById("p1").textContent = "Your name is: " + fullName ;
 document.getElementById("p2").textContent = "Your age is: " + age;
 document.getElementById("p3").textContent = "You are a student: " + student;
 */
+
+
 // Arithmetic operators = operands (valuse, variables, etc.)
 //                      =   operators (+, -, /, *)
 /*
@@ -61,6 +63,7 @@ let ExtraStudents = students ** 3;
 console.log(students);
 */
 
+
 //Operator precedence
 /*
 1. parenthesis ()
@@ -71,6 +74,8 @@ console.log(students);
 let result = 1 + 2 * 3 + 4 ** 2;
 console.log(result);
 */
+
+
 
 // User input
 /*
@@ -92,23 +97,25 @@ console.log(userName);
 */
 
 //profetional way = html textbox
-
+/*
 let userName;
 let header;
 document.getElementById("mySubmit").onclick = function(){
     userName = document.getElementById("myText").value;
     header = document.getElementById("h1").textContent = "Hello: " + userName;
 }
+    */
+
 
 //type conversion = change the datatype of a value to a nother (string, nummber, booleans)
-
+/*
 let age = window.prompt("Enter your age");
 age = Number(age);
 
 age+=2;
 
 console.log(age, typeof age);
-
+*/
 //jos jedan primer
 
 let x = "";
@@ -124,13 +131,15 @@ console.log(y, typeof y);
 console.log(z, typeof z);
 //ovako mozemo da proverimo da li je neko uneo neki podatak u User input, posto je boolean za empty varijablu uvek false
 
+
 //Konstante const = variables som can not be changed
 //zadatak: napravi program gde za izracunavanje obim kruga gde user unosi precnik kruga.
-
+/*
 const PI = 3.1415926;
 let radius;
 let circumference;
-
+let title = document.getElementById("title2").textContent = "Circumference of the circel"
+*/
 //kad user ubacuje vrednost preko prompta onda on automatski uzima unetu vrednost...ali kada user unosi neki podatak preko inputa i submita onda je neophodno da bi izvukli koja je to uneta vrednost napisemo code...    userVrednost = document.getElementById("input").value;
 /*
 radius = window.prompt("Enter radius of the cirkel");
@@ -141,13 +150,43 @@ circumference = 2 * radius * pi;
 console.log(circumference);
 
 */
-// Kad user ubacuje podatak preko inbox i submita
 
+
+// Kad user ubacuje podatak preko inbox i submita
+/*
 let message;
 document.getElementById("sub").onclick = function(){
     radius = document.getElementById("input").value;
     radius = Number(radius);
     circumference = 2 * radius * PI;
-    message = document.getElementById("circelResult").textContent = "Circumference of the circel is:" + circumference;
+    document.getElementById("circelResult").textContent = "Circumference of the circel is:" + circumference + "cm";
 };
+*/
+
+//Counter
+
+let title = document.getElementById("title3").textContent = "Counter";
+
+const decreaseBt = document.getElementById("decrease");
+const resetBt = document.getElementById("reset");
+const increaseBt = document.getElementById("increase");
+const countLabel = document.getElementById("label");
+
+let count = 0;
+
+increaseBt.onclick = function() {
+    count ++;
+    countLabel.textContent = count;
+}
+
+decreaseBt.onclick = function() {
+    count --;
+    countLabel.textContent = count;
+}
+
+resetBt.onclick = function() {
+    count = 0;
+    countLabel.textContent = count;
+}
+
 
