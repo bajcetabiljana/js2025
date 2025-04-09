@@ -164,7 +164,7 @@ document.getElementById("sub").onclick = function(){
 */
 
 //Counter
-
+/*
 let title = document.getElementById("title3").textContent = "Counter";
 
 const decreaseBt = document.getElementById("decrease");
@@ -188,5 +188,83 @@ resetBt.onclick = function() {
     count = 0;
     countLabel.textContent = count;
 }
+*/
+
+//Math =  obezbedjuje da mozemo da koristimo razlicite funkcije koje nam proracunavaju razne matematicke zadatke.
+/*
+Math.PI
+//daje vrednost pi
+console.log(Math.PI);
 
 
+let p = 3.81;
+let t = 2;
+let m;
+
+//Math.round = zaokruzuje decimalni broj/do 5 na dole od 5 na gore
+m = Math.round(p);
+
+console.log(m);
+
+
+Math.floor(m);
+Math.ceil(m);
+//izbacuje najvecu ili najmanju vrednost
+Math.max(p,t,m);
+Math.min(p,t,m);
+
+//Izbacuje neki rendom number izmedju 0 i 1
+let randomNum = Math.random();
+
+console.log(randomNum);
+
+//ako hocemo da nam da neki random broj od 0 do 5 onda:
+
+let random5 = Math.random() * 6;
+
+//ali tada dobijamo neki decimalni broj do 6. Ako zelimo da bude celi broj moramo da:
+
+random5 = Math.floor(Math.random()  * 6);
+
+//na ovaj nacin dobijamo random brojeve od 0 do 5, a mi zelimo od 1 do 6. Onda:
+
+let random6 = Math.floor(Math.random()  * 6)+1;
+// sa +1 mu govorimo koji je broj minimum. ako mu kazemo +4, on ce poceti da izbacuje brojeve od 4
+*/
+
+
+//RENDOM NUMBER GENERATOR
+/*
+let randomNum = Math.floor(Math.random()  * 6) + 1;
+
+console.log(randomNum);
+*/
+//ovo mozemo uraditi i ovako
+/*
+let random37;
+let min = 3;
+let max = 7;
+random37 = Math.floor(Math.random()  * (max - min)) + min;
+
+console.log(random37);
+*/
+
+const myButton = document.getElementById("myButton");
+const Label1 = document.getElementById("label1");
+const Label2 = document.getElementById("label2");
+const Label3 = document.getElementById("label3");
+
+const min = 1;
+const max = 6;
+let randomNum1;
+let randomNum2;
+let randomNum3;
+
+myButton.onclick = function(){
+    randomNum1 = Math.floor(Math.random() * max)+ min;
+    randomNum2 = Math.floor(Math.random() * max)+ min;
+    randomNum3 = Math.floor(Math.random() * max)+ min;
+    Label1.textContent = randomNum1;
+    Label2.textContent = randomNum2;
+    Label3.textContent = randomNum3;
+}   

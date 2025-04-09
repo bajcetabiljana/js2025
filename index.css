@@ -43,3 +43,16 @@ button {
 #count label {
     font-size: 60px;
 }
+
+#randomGenerator {
+    button{
+        padding: 5vw;
+        font-size: 5vw;
+        height: auto;
+        
+    }
+    #myLabel {
+        color: white;
+        font-size: 10vw;
+    }
+}
