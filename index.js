@@ -248,7 +248,7 @@ random37 = Math.floor(Math.random()  * (max - min)) + min;
 
 console.log(random37);
 */
-
+/*
 const myButton = document.getElementById("myButton");
 const Label1 = document.getElementById("label1");
 const Label2 = document.getElementById("label2");
@@ -268,3 +268,92 @@ myButton.onclick = function(){
     Label2.textContent = randomNum2;
     Label3.textContent = randomNum3;
 }   
+    */
+
+//If statement
+/*
+let age = 13;
+
+if(age >= 18){
+    console.log("You are old enough to enter this site.");
+}
+else{
+    console.log("You must be 18+ to enter this site.");
+}
+    */
+// if statment super funkcionise sa buleanom..da se proverava da li je nesto tacno ili ne
+/*
+let ifStudent = false;
+
+if(ifStudent){
+    console.log("You are a student!");
+}
+else{
+    console.log("You are NOT a student!");
+}
+*/
+/*
+let age = 18;
+let hasLicense = false;
+
+if(age >= 16){
+    console.log("You are old enough to drive");
+    if(hasLicense){
+        console.log("You have your license!")
+    }
+    else{
+        console.log("You do not have your license!")
+    }
+}   
+else{
+    console.log("You are NOT old enough to drive")
+}
+    */
+/*
+let age = 18;
+
+if(age>=100){
+    console.log("You are to old to enter this site!.")
+}
+else if(age==0){
+    console.log("You are just born!.")
+}
+else if(age >= 18){
+    console.log("You are old enough to enter this site.");
+}
+else if(age<=0){
+    console.log("Your age can not be below 0.")
+}
+
+else{
+    console.log("You must be 18+ to enter this site.");
+}
+    */
+
+let age;
+const result = document.getElementById("result");
+const submit = document.getElementById("submit");
+const myInput = document.getElementById("myInput");
+
+submit.onclick = function(){
+
+    age = myInput.value;
+    age = Number(age);
+    if(age > 100){
+        result.textContent = "You are to old!";
+    }
+    else if(age == 0){
+        result.textContent = "You are just born";
+    }
+    else if(age < 0){
+         result.textContent = "It is imposible age";
+    }
+    else if( age >= 18){
+        result.textContent = "You are en adult";
+    }
+    else{
+        result.textContent = "You are not en adult.";
+    }
+
+}
+    
