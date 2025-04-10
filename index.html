@@ -64,6 +64,26 @@ Java Script Tutorijal
                         <button type="submit" id="submit">Submit</button>
                         <h2 id="result"></h2>
                 </div>
+
+                <div class="css" id="check">
+                    <h2 id="title7">Checked property</h2> 
+                    <!-- type="radio, text, checkbox" odredjuju kako ce da izgleda input.
+                    for="ime id nekog elementa na koji se odnosi" na taj nacin kad se klikne na taj label isto ce da checkira i input.
+                    name="neko zajednicko ime za inpute radio" ako zelimo da moze samo jedan da se cekira, a ne vise u isto vreme.
+                    --> 
+                        <input id="myCheckBox" type="checkbox"> 
+                        <label for="myCheckBox">Subscribe</label><br>
+                        <input id="visaBtn" type="radio" name="card"> 
+                        <label  for="visaBtn">Visa</label><br>
+                        <input id="masterBtn" type="radio" name="card">
+                        <label  for="masterBtn">MasterCard</label><br>
+                        <input id="payPalBtn" type="radio" name="card">
+                        <label  for="payPalBtn">PayPal</label><br><br>
+
+                        <button id="submitBt" type="submit">Submit</button>
+                        <h2 id="submitResult"></h2>
+                        <h2 id="payResult"></h2>
+                </div>
                 
             </div>
         </header>

@@ -329,7 +329,7 @@ else{
     console.log("You must be 18+ to enter this site.");
 }
     */
-
+/*
 let age;
 const result = document.getElementById("result");
 const submit = document.getElementById("submit");
@@ -356,4 +356,37 @@ submit.onclick = function(){
     }
 
 }
-    
+    */
+
+//Check proprety is checking if radio button or check box are checked
+
+const checkBox = document.getElementById("myCheckBox");
+const radioVisa = document.getElementById("visaBtn");
+const radioMaster = document.getElementById("masterBtn");
+const radioPayPal = document.getElementById("payPalBtn");
+const submitResult = document.getElementById("submitResult");
+const payResult = document.getElementById("payResult");
+const submit = document.getElementById("submitBt");
+
+
+submit.onclick = function(){
+    if(checkBox.checked){
+        submitResult.textContent = "You are subscribed!"; 
+    }
+    else{
+        submitResult.textContent = "You are NOT subscribed!"; 
+    }
+
+    if(radioVisa.checked){
+        payResult.textContent = "You are paying with Visa card";
+    }
+    else if(radioMaster.checked){
+        payResult.textContent = "You are paying with Master card";
+    }
+    else if(radioPayPal.checked){
+        payResult.textContent = "You are paying with PayPal";
+    }
+    else{
+        payResult.textContent = "You have not checked any of options!"
+    }
+}
