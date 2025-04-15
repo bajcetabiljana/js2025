@@ -359,7 +359,7 @@ submit.onclick = function(){
     */
 
 //Check proprety is checking if radio button or check box are checked
-
+/*
 const checkBox = document.getElementById("myCheckBox");
 const radioVisa = document.getElementById("visaBtn");
 const radioMaster = document.getElementById("masterBtn");
@@ -390,3 +390,50 @@ submit.onclick = function(){
         payResult.textContent = "You have not checked any of options!"
     }
 }
+    */
+
+// Ternary operator> shortcut to if{} and else{} statemet helps to assign a variable based on condtion 
+// condition ? codeIfTrue : codeIfFalse;
+
+/*let age =21;
+let message = age >= 18 ? "You are an adult" : "You are a minor!";    
+console.log(message);
+*/
+//ovo je isto kao da smo napisali 
+/*
+let age = 21;
+let message;
+
+if(age >= 18){
+    message = "You are an adult";
+}
+else{
+    message = "You are an minor";
+}
+*/
+/*
+let isStudent = true;
+let message = isStudent ? "You are a stdent" : "You are not a student";
+
+console.log(message);
+*/
+
+//vezba 2
+/*
+const input = document.getElementById("input7");
+const submit = document.getElementById("submit7");
+const result = document.getElementById("result7");
+let time;
+
+console.log("submit");
+console.log(submit);
+submit.onclick = function(){
+    console.log("pritisnuo dugme");
+    time = input.value;
+    time = Number(time);
+    result.textContent = time <= 12 ?  "Good morning" : "Good afternoon!";
+
+}
+    */
+
+
