@@ -553,3 +553,59 @@ submit10.onclick = function(){
             result10.textContent = "Your Grade is: D";
     }
 }
+
+// STRING METHODS
+
+let someString = "Zekaz";
+
+someString.charAt(0); // ovaj metod govori koje slvo na mestu br 0 u datom stringu.
+console.log(someString.charAt(3))
+
+someString.indexOf("z");// koje mesto je odredjeno slovo u stringu
+console.log(someString.indexOf("z"));
+
+someString.lastIndexOf("z");// koje mesto je odredjeno slovo u stringu
+console.log(someString.lastIndexOf("z"));// koje mesto zauzima poslednje slovo "a" u nekom stringu
+
+someString.length;// ovaj property nam vraca koliko karaktera ima neki string
+console.log(someString.length);
+
+someString.trim();//trimuje/brise prazan prostor ako postoji ispred ili iza nekog stringa
+
+someString.toUpperCase();//sva slova da budu velika
+console.log(someString.toUpperCase());
+
+someString.toLowerCase();
+console.log(someString.toLowerCase());
+
+someString.repeat(1);//ako zelimo da ponovi odredjeni broj puta neki string
+console.log(someString.repeat(3));
+
+someString.startsWith("");// proverava da li neki string pocinje sa necim..u ovom slucaju sa praznim prostorom.
+console.log(someString.startsWith(" "));
+
+let whiteSpace = someString.startsWith(" ");
+
+if(whiteSpace){
+    console.log("Your string can not start with a white spase.");
+}
+else{
+    console.log(someString + " is ok written");
+}
+
+someString.endsWith("");
+
+someString.includes();//da li sadrzi neki znak
+console.log(someString.includes());
+
+//zadatak kako da izbacimo neki znak iz stringa
+
+let phoneNumber = "075/557/2524";
+phoneNumber = phoneNumber.replaceAll("-", "/");// na prvom mestu u zagradi je sta zelimo da izbacimo a posle zareza je sa cime zelimo da ga zamenimo
+
+console.log(phoneNumber);
+
+phoneNumber.padStart(15,"0");// koliko ukupno znakova treba da bude dugacak taj string , a posle zareza sa cime da ga nadopunimo ukoliko nije dovoljno dugacak
+console.log(phoneNumber.padStart(15,"0"));
+
+phoneNumber.padEnd();
