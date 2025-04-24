@@ -647,4 +647,29 @@ console.log(sliceUserName);
 let extension = email.slice(email.indexOf("@") + 1);
 console.log(extension);
 
-//
+//Method CHAINING = calling one method after another in one continuosu line of code.
+
+// NO METHOD CHAINING
+/*let ime = window.prompt("Enter your name: ");
+
+ime = ime.trim();
+let firstLetter = ime.charAt(0);
+firstLetter = firstLetter.toUpperCase();
+
+console.log(firstLetter);
+
+let otherLetters = ime.slice(1,ime.length);
+otherLetters = otherLetters.toLowerCase();
+
+console.log(otherLetters);
+console.log(ime);
+
+ime = firstLetter + otherLetters;
+console.log(ime);
+*/
+// with Method Chaninig
+
+let enterName = window.prompt("Unesi svoje ime:");
+enterName = enterName.trim().charAt(0).toUpperCase() + enterName.trim().slice(1, enterName.length).toLowerCase();
+
+console.log(enterName);
