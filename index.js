@@ -609,3 +609,42 @@ phoneNumber.padStart(15,"0");// koliko ukupno znakova treba da bude dugacak taj 
 console.log(phoneNumber.padStart(15,"0"));
 
 phoneNumber.padEnd();
+
+
+// STRING SLICING = creating a substring from a portion of another string
+
+//string.slice(start, end); end je do tog broja, ne ukljucuje taj broj
+
+const MyFullName = "Bilja Bajceta";
+let stringLength = MyFullName.length;
+console.log(stringLength);
+
+let firstName = MyFullName.slice(0, 5);
+let lastName = MyFullName.slice(6, stringLength);
+console.log(firstName + " " + lastName);
+
+let firstChar = MyFullName.slice(0, 1);
+let lastChar = MyFullName.slice(-3);//pokazuje poslednja 3 karaktera
+console.log(firstChar + " " + lastChar);
+
+//ovo sve moze da se napise i na vise dinamican nacin
+
+let yourFullName = "Miki Maus";
+let yourFirstName = yourFullName.slice(0, yourFullName.indexOf(" "));
+console.log(yourFirstName);
+let yourLastName = yourFullName.slice(yourFullName.indexOf(" ")+1); //ovo +1 smo uradili da ne bi poceo od 0 karaktera koji je spejs vec od 1 karaktera koji je pocetak prezimena
+
+console.log(yourFirstName + " " + yourLastName);
+console.log(yourFirstName);
+console.log(yourLastName);
+
+//
+const email = "biljanara@yahoo.com";
+
+let sliceUserName = email.slice(0, email.indexOf("@"));
+console.log(sliceUserName);
+
+let extension = email.slice(email.indexOf("@") + 1);
+console.log(extension);
+
+//
