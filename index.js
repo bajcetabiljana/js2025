@@ -673,3 +673,17 @@ let enterName = window.prompt("Unesi svoje ime:");
 enterName = enterName.trim().charAt(0).toUpperCase() + enterName.trim().slice(1, enterName.length).toLowerCase();
 
 console.log(enterName);
+
+// Logical operators = AND && OR || NOT !
+
+const temp = 20;
+
+// && AND that meens that bouth conditions most be true
+if(temp>0 && temp<=30){
+    console.log("The wether is good!");
+}
+else{
+    console.log("The wether is bad!");
+}
+
+// OR || that means that oneof conditions most be true if we want that code be exequted.
