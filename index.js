@@ -669,10 +669,10 @@ console.log(ime);
 */
 // with Method Chaninig
 
-let enterName = window.prompt("Unesi svoje ime:");
-enterName = enterName.trim().charAt(0).toUpperCase() + enterName.trim().slice(1, enterName.length).toLowerCase();
+//let enterName = window.prompt("Unesi svoje ime:");
+//enterName = enterName.trim().charAt(0).toUpperCase() + enterName.trim().slice(1, enterName.length).toLowerCase();
 
-console.log(enterName);
+//console.log(enterName);
 
 // Logical operators = AND && OR || NOT !
 
@@ -687,3 +687,66 @@ else{
 }
 
 // OR || that means that oneof conditions most be true if we want that code be exequted.
+
+// = assignement operator
+// == comparison operator (comper if values are equal), ne gleda da li su to isti tipovi podataka(string, number, bulean);
+// === strict equality ooperator (comper if values & datatype are equal), gleda i da li su isti tipovi podataka>string, number, bulean.
+// != inequality opertor
+// !== strict inequality operator
+
+
+//WHILE LOOP = repeat some code While some condition is true
+
+let expl = document.getElementById("exp16");
+expl.textContent = "It will repeat some code While some condition is true";
+
+let korisnickoIme = "";
+const result16 = document.getElementById("result16");
+const submit16 = document.getElementById("submit16");
+const text16 = document.getElementById("text16");
+
+submit16.onclick = function(){
+    korisnickoIme = text16.value;
+   /* if(korisnickoIme === ""){
+        result16.textContent = "You did not enter your name!";
+    }
+    else {
+        result16.textContent = "Hello" + " " + korisnickoIme ;
+    }
+        */
+       while(korisnickoIme === ""){
+        result16.textContent = "You did not enter your name!";
+       }
+       //ovo moze da se napise i ovako
+      /* do{
+        result16.textContent = "You did not enter your name!";
+       }
+       while(korisnickoIme === "");
+       */
+       result16.textContent = "Hello" + " " + korisnickoIme ;
+}
+
+//primer 2 while loop
+/*
+const potvrda = document.getElementById("res16"); 
+let logedIn = false;
+let korisnik;
+let password;
+
+do {
+    korisnik = window.prompt("Uneki korisnicko ime!");
+    password = window.prompt("Unesi svoju sifru!");
+
+    if(korisnik==="bilja" && password==="7777"){
+        logedIn = true;
+        console.log(korisnik + " " + "Ulogovani ste");
+    }
+    else {
+        console.log("You enterd invalid data");
+
+    }
+}
+
+while(!logedIn)
+
+*/

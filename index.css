@@ -16,6 +16,15 @@ body{
     }
 }
 
+ul {
+    text-align: left ;
+    li{
+        list-style: none;
+        margin-bottom: 3vw;
+
+    }
+}
+
 input {
     margin: 0 10px;
     height: 30px;
