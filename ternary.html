@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            Ternary
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+      
+        <div class="css" id="ternary">
+            <h1 id="title"></h1>
+            <p id="exp"></p>
+            <label id="label" for="input">Enter a time:</label>  
+            <input id="input" type="text"> <br>
+            <button type="submit" id="submit">Submit</button>
+            <h2 id="result"></h2>
+        </div>
+ 
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+const title = document.getElementById("title");
+title.textContent = "Ternary operator";
+
+const exp = document.getElementById("exp");
+exp.textContent = " shortcut to if{} and else{} statemet helps to assign a variable based on condtion = condition ? codeIfTrue : codeIfFalse;";
+
+    
+
+let godine = 21;
+let info = godine >= 18 ? "You are an adult" : "You are a minor!";    
+console.log(info);
+
+//ovo je isto kao da smo napisali 
+
+let age = 21;
+let message;
+
+if(age >= 18){
+    message = "You are an adult";
+}
+else{
+    message = "You are an minor";
+}
+
+let isStudent = true;
+let poruka = isStudent ? "You are a stdent" : "You are not a student";
+
+console.log(poruka);
+
+
+//vezba 2 Enter number/our recive message acordingly
+
+const input = document.getElementById("input");
+const submit = document.getElementById("submit");
+const result = document.getElementById("result");
+let time;
+
+console.log("submit");
+console.log(submit);
+submit.onclick = function(){
+    console.log("pritisnuo dugme");
+    time = input.value;
+    time = Number(time);
+    result.textContent = time <= 12 ?  "Good morning" : "Good afternoon!";
+
+}
+   
+
+</script>

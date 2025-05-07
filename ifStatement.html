@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            IF Statement
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>     
+        <div class="css">
+            <h1 id="title"></h1>
+            <p id="exp"></p>
+            <label id="myLabel" for="input">Enter your age:</label>  
+            <input id="input" type="text"> <br>
+            <button type="submit" id="submit">Submit</button>
+            <h2 id="result"></h2>
+        </div>       
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script >
+   
+   const title = document.getElementById("title");
+   title.textContent = "IF STATEMENT";
+
+   const exp = document.getElementById("exp");
+   exp.textContent = "";
+
+
+let age = 13;
+
+if(age >= 18){
+    console.log("You are old enough to enter this site.");
+}
+else{
+    console.log("You must be 18+ to enter this site.");
+}
+    
+// if statment super funkcionise sa buleanom..da se proverava da li je nesto tacno ili ne
+
+let ifStudent = false;
+
+if(ifStudent){
+    console.log("You are a student!");
+}
+else{
+    console.log("You are NOT a student!");
+}
+
+
+let godine = 18;
+let hasLicense = false;
+
+if(godine >= 16){
+    console.log("You are old enough to drive");
+    if(hasLicense){
+        console.log("You have your license!")
+    }
+    else{
+        console.log("You do not have your license!")
+    }
+}   
+else{
+    console.log("You are NOT old enough to drive")
+}
+    
+
+let age2 = 180;
+
+if(age2>=100){
+    console.log("You are to old to enter this site!.")
+}
+else if(age2==0){
+    console.log("You are just born!.")
+}
+else if(age2 >= 18){
+    console.log("You are old enough to enter this site.");
+}
+else if(age2<=0){
+    console.log("Your age can not be below 0.")
+}
+
+else{
+    console.log("You must be 18+ to enter this site.");
+}
+
+
+//Input your age and recive massage acording to input    
+
+const result6 = document.getElementById("result6");
+const submit6 = document.getElementById("submit6");
+const text6 = document.getElementById("text6");
+let age3;
+
+submit.onclick = function(){
+
+    age3 = input.value;
+    age3 = Number(age3);
+    if(age3 > 100){
+        result.textContent = "You are to old!";
+    }
+    else if(age3 == 0){
+        result.textContent = "You are just born";
+    }
+    else if(age3 < 0){
+         result.textContent = "It is imposible age";
+    }
+    else if( age3 >= 18){
+        result.textContent = "You are en adult";
+    }
+    else{
+        result.textContent = "You are not en adult.";
+    }
+
+}
+
+
+</script>
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

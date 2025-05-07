@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            String Methods
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+        <div class="css">
+            <h1 id="title"></h1>
+            <p id="exp">
+                <ul>
+                    <li>.charAt(0);</li>
+                    <li>.indexOf("z");</li>
+                    <li>.lastIndexOf("z");</li>
+                    <li>.length; </li>
+                    <li>.trim();</li>
+                    <li>.toUpperCase();</li>
+                    <li>.toLowerCase();</li>
+                    <li>.repeat(1);</li>
+                    <li>.startsWith("");</li>
+                    <li>.endsWith("");</li>
+                    <li>.includes()</li>
+                    <li>.padStart(15,"0");</li>
+                    <li>.padEnd();</li>
+                    <li></li>
+                </ul>
+            </p>
+              console.log();
+        </div>
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+
+    const title = document.getElementById("title");
+    title.textContent = "String methods";
+
+    const exp = document.getElementById("exp");
+  
+ 
+// STRING METHODS
+
+let someString = "Zekaz";
+
+someString.charAt(0); // ovaj metod govori koje slvo na mestu br 0 u datom stringu.
+console.log(someString.charAt(3))
+
+someString.indexOf("z");// koje mesto je odredjeno slovo u stringu
+console.log(someString.indexOf("z"));
+
+someString.lastIndexOf("z");// koje mesto je odredjeno slovo u stringu
+console.log(someString.lastIndexOf("z"));// koje mesto zauzima poslednje slovo "a" u nekom stringu
+
+someString.length;// ovaj property nam vraca koliko karaktera ima neki string
+console.log(someString.length);
+
+someString.trim();//trimuje/brise prazan prostor ako postoji ispred ili iza nekog stringa
+
+someString.toUpperCase();//sva slova da budu velika
+console.log(someString.toUpperCase());
+
+someString.toLowerCase();
+console.log(someString.toLowerCase());
+
+someString.repeat(1);//ako zelimo da ponovi odredjeni broj puta neki string
+console.log(someString.repeat(3));
+
+someString.startsWith("");// proverava da li neki string pocinje sa necim..u ovom slucaju sa praznim prostorom.
+console.log(someString.startsWith(" "));
+
+let whiteSpace = someString.startsWith(" ");
+
+if(whiteSpace){
+    console.log("Your string can not start with a white spase.");
+}
+else{
+    console.log(someString + " is ok written");
+}
+
+someString.endsWith("");
+
+someString.includes();//da li sadrzi neki znak
+console.log(someString.includes());
+
+//zadatak kako da izbacimo neki znak iz stringa
+
+let phoneNumber = "075/557/2524";
+phoneNumber = phoneNumber.replaceAll("-", "/");// na prvom mestu u zagradi je sta zelimo da izbacimo a posle zareza je sa cime zelimo da ga zamenimo
+
+console.log(phoneNumber);
+
+phoneNumber.padStart(15,"0");// koliko ukupno znakova treba da bude dugacak taj string , a posle zareza sa cime da ga nadopunimo ukoliko nije dovoljno dugacak
+console.log(phoneNumber.padStart(15,"0"));
+
+phoneNumber.padEnd();
+
+</script>
+

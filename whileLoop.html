@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            While loop
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+  
+        <div class="css" id="">
+            <h1 id="title">While loop</h1> 
+                <p id="exp">
+                    = repeat some code While some condition is true
+                </p>
+                <label id="lable" for="input">Uneki svoje ime:</label>  
+                <input id="input" type="text"> <br>
+                <button type="submit" id="submit16">Submit</button>
+                <h2 id="result"></h2>
+        </div>
+                
+                
+        
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+
+    const title = document.getElementById("title");
+    title.textContent = "WHILE LOOP";
+    const exp = document.getElementById("exp");
+    exp.textContent = "repeat some code While some condition is true"
+
+   
+let korisnickoIme = "";
+const result = document.getElementById("result");
+const submit = document.getElementById("submit");
+const input = document.getElementById("input");
+
+submit.onclick = function(){
+    korisnickoIme = input.value;
+    if(korisnickoIme === ""){
+        result.textContent = "You did not enter your name!";
+    }
+    else {
+        result.textContent = "Hello" + " " + korisnickoIme ;
+    }
+     
+       while(korisnickoIme === ""){
+        result.textContent = "You did not enter your name!";
+       }
+      
+       //ovo moze da se napise i ovako
+    do{
+        result.textContent = "You did not enter your name!";
+       }
+       while(korisnickoIme === "");
+     
+       result.textContent = "Hello" + " " + korisnickoIme ;
+}
+
+//primer 2 while loop
+
+const potvrda = document.getElementById("result"); 
+let logedIn = false;
+let korisnik;
+let password;
+
+do {
+    korisnik = window.prompt("Uneki korisnicko ime!");
+    password = window.prompt("Unesi svoju sifru!");
+
+    if(korisnik==="bilja" && password==="7777"){
+        logedIn = true;
+        console.log(korisnik + " " + "Ulogovani ste");
+    }
+    else {
+        console.log("You enterd invalid data");
+
+    }
+}
+
+while(!logedIn)
+
+
+
+
+
+    
+
+
+
+
+
+</script>

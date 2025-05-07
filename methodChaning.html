@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            Method Chaning 
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+        <div class="css" id="">
+            <h1 id="title"></h1>
+            <p id="exp"></p>
+                  console.log();
+        </div>  
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+
+    const title = document.getElementById("title");
+    title.textContent = "Method Chaning";
+
+    const exp = document.getElementById("exp");
+    exp.textContent = "Chaining method = calling one method after another in one continoues line of code."
+ 
+
+
+// NO METHOD CHAINING
+/*let ime = window.prompt("Enter your name: ");
+
+ime = ime.trim();
+let firstLetter = ime.charAt(0);
+firstLetter = firstLetter.toUpperCase();
+
+console.log(firstLetter);
+
+let otherLetters = ime.slice(1,ime.length);
+otherLetters = otherLetters.toLowerCase();
+
+console.log(otherLetters);
+console.log(ime);
+
+ime = firstLetter + otherLetters;
+console.log(ime);
+*/
+// with Method Chaninig
+
+let enterName = window.prompt("Unesi svoje ime:");
+enterName = enterName.trim().charAt(0).toUpperCase() + enterName.trim().slice(1, enterName.length).toLowerCase();
+
+console.log(enterName);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+</script>

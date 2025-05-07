@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            Checked Property
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+        <header>
+            <div class="css" id="check">
+                <h1 id="title"></h1>
+                <p id="exp"></p> 
+                <!-- type="radio, text, checkbox" odredjuju kako ce da izgleda input.
+                    for="ime id nekog elementa na koji se odnosi" na taj nacin kad se klikne na taj label isto ce da checkira i input.
+                    name="neko zajednicko ime za inpute radio" ako zelimo da moze samo jedan da se cekira, a ne vise u isto vreme.
+                --> 
+                    <input id="myCheckBox" type="checkbox"> 
+                    <label for="myCheckBox">Subscribe</label><br>
+                    <input id="visaBtn" type="radio" name="card"> 
+                    <label  for="visaBtn">Visa</label><br>
+                    <input id="masterBtn" type="radio" name="card">
+                    <label  for="masterBtn">MasterCard</label><br>
+                    <input id="payPalBtn" type="radio" name="card">
+                    <label  for="payPalBtn">PayPal</label><br><br>
+
+                    <button id="submitBt" type="submit">Submit</button>
+
+                    <h2 id="submitResult"></h2>
+                    <h2 id="payResult"></h2>
+            </div>
+
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+    const title = document.getElementById("title");
+    title.textContent = "Checked property";
+
+    const exp = document.getElementById("exp");
+    exp.textContent = "Check proprety is checking if radio button or check box are checked";
+
+    //
+const checkBox = document.getElementById("myCheckBox");
+const radioVisa = document.getElementById("visaBtn");
+const radioMaster = document.getElementById("masterBtn");
+const radioPayPal = document.getElementById("payPalBtn");
+const submitResult = document.getElementById("submitResult");
+const payResult = document.getElementById("payResult");
+const submit7 = document.getElementById("submitBt");
+
+
+submit7.onclick = function(){
+    if(checkBox.checked){
+        submitResult.textContent = "You are subscribed!"; 
+    }
+    else{
+        submitResult.textContent = "You are NOT subscribed!"; 
+    }
+
+    if(radioVisa.checked){
+        payResult.textContent = "You are paying with Visa card";
+    }
+    else if(radioMaster.checked){
+        payResult.textContent = "You are paying with Master card";
+    }
+    else if(radioPayPal.checked){
+        payResult.textContent = "You are paying with PayPal";
+    }
+    else{
+        payResult.textContent = "You have not checked any of options!"
+    }
+}
+   
+
+
+
+</script>

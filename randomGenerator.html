@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            Random Generator
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+        <div class="css" id="randomGenerator">
+            <h1 id="title">Dice game/ Random Generator</h1>
+            <button id="submit">roll</button> 
+            <label id="label1" class="myLabel"></label>
+            <label id="label2" class="myLabel"></label>
+            <label id="label3" class="myLabel"></label>
+        </div>
+
+               
+
+                
+        
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+    //RENDOM NUMBER GENERATOR
+
+let randomN = Math.floor(Math.random()  * 6) + 1;
+
+console.log(randomN);
+
+//ovo mozemo uraditi i ovako
+
+let random37;
+let min = 3;
+let max = 7;
+random37 = Math.floor(Math.random()  * (max - min)) + min;
+
+console.log(random37);
+
+//DICE GAME
+
+const submit = document.getElementById("submit");
+const Label1 = document.getElementById("label1");
+const Label2 = document.getElementById("label2");
+const Label3 = document.getElementById("label3");
+
+const minN = 1;
+const maxN = 6;
+let randomNum1;
+let randomNum2;
+let randomNum3;
+
+submit.onclick = function(){
+    randomNum1 = Math.floor(Math.random() * maxN)+ minN;
+    randomNum2 = Math.floor(Math.random() * maxN)+ minN;
+    randomNum3 = Math.floor(Math.random() * maxN)+ minN;
+    Label1.textContent = randomNum1;
+    Label2.textContent = randomNum2;
+    Label3.textContent = randomNum3;
+}   
+
+</script>

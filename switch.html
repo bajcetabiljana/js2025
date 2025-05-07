@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            Switch
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+        <div class="css">
+            <h1 id="title"></h1>
+            <p id="exp"></p>
+              <label id="label" for="input">Enter a number from 1 to 7:</label>  
+                <input id="input" type="text"> <br><br>
+                <button type="submit" id="submit">Submit</button><br>
+                <h2 id="result"></h2>
+        </div>
+        <div class="css">
+            <h1 id="title2"></h1>
+              <label id="lable2" for="input">Enter your score:</label>  
+                <input id="input2" type="text"> <br>
+                <button type="submit" id="submit2">Submit</button>
+                <h2 id="result2"></h2>
+        </div>
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+
+    const title = document.getElementById("title");
+    title.textContent = "Switch";
+    
+
+    const exp = document.getElementById("exp");
+    exp.textContent = "Switch = zamena za puno if, ellse statmenta";
+
+    const input = document.getElementById("input");
+    const submit = document.getElementById("submit");
+    const result = document.getElementById("result");
+    let day;
+
+
+/*
+submit.onclick = function(){
+    day = input.value;
+    
+    if(day == 1){
+        result.textContent = "Monday";
+    }
+    else if(day ==2){
+        result.textContent = "Thuesday";
+    }
+    else if(day ==3){
+        result.textContent = "Wednesday";
+    }
+    else if(day ==4){
+        result.textContent = "Thursday";
+    }
+    else if(day ==5){
+        result.textContent = "Friday";
+    }
+    else if(day ==6){
+        result.textContent = "Saturday";
+    }
+    else if(day ==7){
+        result.textContent = "Sunday";
+    }
+    else{
+        result.textContent = "You enterd the wrong number";
+    }
+}
+    */
+
+//umesto da ovoliko puta imamo if, else statment...ovo mozemo napisat i ovako:
+
+
+console.log(submit);
+
+submit.onclick = function(){
+    console.log("Da li me vidis?")
+    
+
+    day = input.value;
+    console.log(day);
+
+    switch(day){
+        case "1":
+            result.textContent("Monday");
+            break;
+        case "2":
+            result.textContent = "Thusday";
+            break;
+        case "3":
+            result.textContent = "Wednsday";
+            break;
+        case "4":
+            result.textContent = "Thursday";
+            break;
+        case "5":
+            result.textContent = "Friyday";
+            break;
+        case "6":
+            result.textContent = "Saturday";
+            break;
+        case "7":
+            result.textContent = "Sunday";
+            break;
+        default:
+            result.textContent = "You enterd a wrong number";
+        
+    }
+    console.log(result);
+
+}
+
+//2 zadatak SWICH
+const title2 = document.getElementById("title2");
+title2.textContent = "Swich 2";
+const input2 = document.getElementById("input2");
+const submit2 = document.getElementById("submit2");
+const result2 = document.getElementById("result2");
+
+let testScore;
+
+submit2.onclick = function(){
+
+    testScore = input2.value;
+    testScore = Number(testScore);
+
+    switch(true){
+        case testScore  >= 90:
+            result2.textContent = "Your Grade is: A";
+            break;
+         case testScore >= 60:
+            result2.textContent = "Your Grade is: B";
+            break;
+        case testScore >= 40:
+            result2.textContent = "Your Grade is: C";
+            break;
+        default:
+            result2.textContent = "Your Grade is: D";
+    }
+}
+
+</script>

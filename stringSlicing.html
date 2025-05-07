@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            String Slicing
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+        <div class="css" id="">
+            <h1 id="title"></h1>
+            <p id="exp"></p> 
+            <p id="exp2"></p>
+            console.log();
+        </div>
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+
+    const title = document.getElementById("title");
+    title.textContent = "String Slicing method";
+
+    const exp = document.getElementById("exp");
+    exp.textContent = "Creating a substring from a portion of another string"
+
+    const exp2 = document.getElementById("exp2");
+    exp2.textContent = "string.slice(start, end); end je do tog broja, ne ukljucuje taj broj";
+
+
+    const MyFullName = "Bilja Bajceta";
+let stringLength = MyFullName.length;
+console.log(stringLength);
+
+let firstName = MyFullName.slice(0, 5);
+let lastName = MyFullName.slice(6, stringLength);
+console.log(firstName + " " + lastName);
+
+let firstChar = MyFullName.slice(0, 1);
+let lastChar = MyFullName.slice(-3);//pokazuje poslednja 3 karaktera
+console.log(firstChar + " " + lastChar);
+
+//ovo sve moze da se napise i na vise dinamican nacin
+
+let yourFullName = "Miki Maus";
+let yourFirstName = yourFullName.slice(0, yourFullName.indexOf(" "));
+console.log(yourFirstName);
+let yourLastName = yourFullName.slice(yourFullName.indexOf(" ")+1); //ovo +1 smo uradili da ne bi poceo od 0 karaktera koji je spejs vec od 1 karaktera koji je pocetak prezimena
+
+console.log(yourFirstName + " " + yourLastName);
+console.log(yourFirstName);
+console.log(yourLastName);
+
+//
+const email = "biljanara@yahoo.com";
+
+let sliceUserName = email.slice(0, email.indexOf("@"));
+console.log(sliceUserName);
+
+let extension = email.slice(email.indexOf("@") + 1);
+console.log(extension);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+</script>
