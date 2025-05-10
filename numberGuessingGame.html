@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            Number guessing game 
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+        <div class="css">
+            <h1 id="title"></h1>
+            <h2 id="result"></h2>
+             
+        </div>
+
+               
+
+                
+        
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+const title = document.getElementById("title");
+title.textContent = "Number guessing game ";
+
+const minNum = 1;
+const maxNum = 3;
+const randomNum = Math.floor(Math.random()* maxNum + minNum);
+console.log(randomNum);
+
+let attempts = 0;
+let running = true;
+
+while(running){
+    let guess = window.prompt("Guess a number between 1 and 3");
+    guess = Number(guess);
+    console.log("GUESS");
+
+    console.log(guess);
+    attempts ++;
+    if(isNaN(guess)){
+        window.alert("That is not a number!");
+    }
+    else if (guess < minNum || guess > maxNum ){
+        window.alert("You entered invalid number!");
+    }
+    else{
+        if(guess < randomNum){
+            window.alert("Too low. Try again!");
+        }
+        else if(guess > randomNum){
+            window.alert("Too high! Try again!");
+
+        }
+        else {
+            window.alert("Congrats, you guessed in" + attempts + "attempt");        
+            running = false;
+        }
+    }
+}
+
+
+
+
+</script>
