@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            FUNCTIONS
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+  
+        <div class="css">
+            <h1 id="title"></h1> 
+            <p id="exp">
+                = repeat some code a LIMITED amounth of times
+            </p>
+            <label for="input">Add a number!</label>
+            <input type="text" id="input">
+            <button id="submit">submit</button>
+            <h2 id="result"></h2>
+        </div>   
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+
+    const title = document.getElementById("title");
+    title.textContent = "Functions";
+
+    const exp = document.getElementById("exp");
+    exp.textContent = "Is a section of reusable code. Declere code once, use it whenever you want. Call the function to execute that code.";
+    
+//primer 1
+    let username;
+    let age;
+
+    function happyBirthday(username, age){
+        console.log("Happy birthday to " + username);
+        console.log("Happy birthday to "+ username);
+        console.log("Happy birthday dear "+ username);
+        console.log("Happy birthday to "+ username);
+        console.log("You are "+ age + " old!");
+    }
+
+    happyBirthday("Marko", 56);
+
+    //primer 2
+    const result = document.getElementById("result");
+    const submit = document.getElementById("submit");
+    const input = document.getElementById("input");
+    
+
+    function addNumbers(){
+        let amounth = 10;
+        amounth = Number(amounth);
+        let newNum = input.value;
+        newNum = Number(newNum);
+         result.textContent = amounth + newNum;
+        
+    }
+
+    submit.onclick = function(){
+        addNumbers();
+    }
+
+    //primer 3
+
+    function substracting (x, y){
+
+        return x - y;
+
+    }
+
+    console.log(substracting(10, 2));
+
+    //primer 4 = Da li je broj paran ili neparan
+
+    function isEven(number) {
+        const resultEven = "Your nummber is even!";
+        const resultOdd = "Your number is odd!";
+        
+        if(number % 2 === 0 ){
+            return resultEven;
+        }
+        else{
+            return resultOdd;
+        }
+        console.log(resultEven);
+    }
+
+    console.log(isEven(8));
+
+    function isEvenTernary(number){
+
+        return number % 2 === 0? "Your nummber is even number!" : "Your nummber is odd number!"
+
+    }
+
+    console.log(isEvenTernary(2));
+
+
+// primer 5 / Funkcija koja proverava da li je nas email ispravan
+
+function validEmail(email){
+    return email.includes("@")? "Your email is correct! " : "Your email is not correct!"
+
+}
+
+console.log(validEmail("biljanara/yahoo.com"));
+
+
+
+</script>
