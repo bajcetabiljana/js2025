@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            Temperature conversion Program
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+  
+        <div class="css" id="tempConv">
+            <h1 id="title"></h1> 
+            <p id="exp">
+            </p>
+            <div class="position">
+                <!--Radio inputs must have the same name--> 
+                <label for="input" id="lable"></label>
+                <input type="text" id="input">
+            </div>
+            
+            <div>
+                <input type="radio" id="celfar" name="radiobtn">
+                <label for="celfar" id="lable2" name="radiobtn"></label>
+            </div>
+
+            <div>
+                <input type="radio" id="farcel">
+                <label for="farcel" id="lable3"></label>
+            </div>
+
+            <button id="submit" onclick="convert()">submit</button>
+            <h2 id="result"></h2>
+        </div>   
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+
+    const title = document.getElementById("title");
+    title.textContent = " Temperature conversion Program";
+
+
+//Program that converts temperature from Celsius till Fahrenheit and vs.
+
+const lable = document.getElementById("lable");
+lable.textContent = "Temperature conversion:";
+
+const lable2 = document.getElementById("lable2");
+lable2.textContent = "Celsius > Fahrenheit";
+
+const lable3 = document.getElementById("lable3");
+lable3.textContent = "Fahrenheit > Celsius";
+
+const input = document.getElementById("input");
+const checkBox1 = document.getElementById("celfar");
+const checkBox2 = document.getElementById("farcel");
+
+const submit = document.getElementById("submit");
+submit.textContent = "Submit";
+
+const result = document.getElementById("result");
+let value;
+let celfar;
+let farcel;
+
+function convert() {
+   value = Number(input.value);
+    celfar = value * 9 / 5 + 32;
+    farcel = (value - 32) * (5/9);
+
+    if(checkBox1.checked){
+        result.textContent = celfar.toFixed(1) + " F";
+
+    }
+     else if(checkBox2.checked){
+        result.textContent = farcel.toFixed(1) + " C";
+    }
+    else{
+        result.textContent = "You need to enter a value"
+    }
+
+}
+
+
+        
+</script>
