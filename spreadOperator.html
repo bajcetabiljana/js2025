@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            Spread Operator ...NIZ/STRING
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+      
+        <div class="css">
+            <h1 id="title"></h1>
+            <p id="exp"></p>
+            <label id="label" for="input">Enter a time:</label>  
+            <input id="input" type="text"> <br>
+            <button type="submit" id="submit">Submit</button>
+            <h2 id="result"></h2>
+        </div>
+ 
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+const title = document.getElementById("title");
+title.textContent = "Spread Operator";
+
+const exp = document.getElementById("exp");
+exp.textContent = " ... Allows an iterable such as an aray or string to be expanded into seperate elements (unpack the elements)"
+
+// tri tackice ispred imena NIZA ...numbers sluzi da se odpakuje neki niz da bbi se iz njega mogao uzeti neki njen broj ili da se doda neki drugi element u niz
+//iz jednog niza brojeva da se izdvoji jedan broj.
+
+let numbers = [1,2,3,5];
+let maximum = Math.max(...numbers);
+let minimum = Math.min(...numbers);
+console.log(numbers);
+console.log(maximum);
+console.log(minimum);
+
+// Kako iz jednog Stringa da se koriste njegovi karakteri
+
+let username = "Biljana Bajceta";
+let letters = [...username].join("/");
+
+console.log(letters);
+
+// 
+
+let fruits = ["apple", "orange", "banana"];
+console.log(...fruits);
+
+let vegetables = ["caarrots", "celery", "potato"]
+console.log(vegetables);
+
+let newFruits = [...fruits].join("-");
+console.log(newFruits);
+
+let foods = [...fruits, ...vegetables, "egg", "milk"];
+
+console.log(foods);
+
+
+
+
+
+
+
+</script>

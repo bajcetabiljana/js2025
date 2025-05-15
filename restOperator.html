@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            Rest parameters (...)
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+      
+        <div class="css">
+            <h1 id="title"></h1>
+            <p id="exp"> 
+            </p>
+            <p id="exp2">spred = expands an array/string into seperate elements<br>
+                rest = bundles seperate elements into an array</p>
+        </div>
+ 
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+const title = document.getElementById("title");
+title.textContent = "Rest Parameters = (...)";
+
+const exp = document.getElementById("exp");
+exp.textContent = "Allow a function work with variable number of arguments by bundling them into the array"
+
+
+//Function koja stvara niz koji ce u sebi da sadrzi sve dole navedene elemente/const
+
+const food1 = "pizza";
+const food2 = "hamburger";
+const food3 = "hotdog";
+const food4 = "sushi";
+const food5 = "ramen";
+const tableFoods = getFood(food1, food4);
+
+// rest (...imeNovogNiza) parametar se koristi kao argument u nekoj funkciji kojom stvaramo novi niz. Kada pozivamo tu funkciju u argumentima pisemo koje elemente stavljamo u taj novi niz;
+function openFridge(...fridge){
+    console.log(...fridge);
+}
+
+function getFood(...tableFoods){
+    return tableFoods;
+}
+
+openFridge(food1, food2, food3, food4, food5);
+console.log(...tableFoods);
+
+// funkcija koja pravi niz nekih brojeva
+
+function sum(...numbers){
+    let result = 0;
+    for(let number of numbers){
+        result += number;
+    }
+    return result;
+}
+
+const total = sum(1,5);
+
+console.log("your total is: " + total);
+
+// average number in array
+
+function averageNum(...numbers){
+    let result = 0;
+    for(let number of numbers){
+        result += number;
+    }
+    return result / numbers.length;
+}
+
+const average = averageNum(1,5);
+
+console.log("Averge number is: " + average);
+
+// Funkcija koja spaja stringove u niz
+
+function combineStrings(...strings){
+    return strings.join(" ");
+}
+
+const fullName = combineStrings("Miss", "Biljna", "Bajceta");
+
+console.log(fullName);
+console.log(...fullName);
+
+
+</script>
