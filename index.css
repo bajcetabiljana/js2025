@@ -108,3 +108,18 @@ button:hover {
 #exp2 {
     color: blueviolet;
 }
+
+#roll{
+    #img {
+        margin-top: 20px;
+        img{
+            width: 7vw;
+            display: none;
+        }
+    
+    }
+    
+    h2 {
+        display: inline;
+    }
+}

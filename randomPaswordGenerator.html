@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            Random Pasword Generator
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+      
+        <div class="css">
+            <h1 id="title"></h1>
+            <p id="exp"></p>
+        </div>
+ 
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+const title = document.getElementById("title");
+title.textContent = "Random Pasword Generator";
+
+const exp = document.getElementById("exp");
+exp.textContent = ""
+
+function randomPasswordGenerator(length, lower, upper, symbol ,number){
+    const lowerCase = "abcdefghcklmnopqerstuvwxyz";
+    const upperCase = "ABCDEFGHCKLMNOPQRSTVWXYZ";
+    const numberCase = "0123456789";
+    const sybmolCase = "!@#$%^_+?>";
+
+    let password = "";
+    let allowedChars = "";
+
+    allowedChars += upper? upperCase : "";
+    allowedChars += lower? lowerCase : "";
+    allowedChars += number? numberCase : "";
+    allowedChars += symbol? sybmolCase : "";
+
+    console.log(allowedChars);
+
+    
+
+    if(length <= 0){
+        return "Your password needs to have att least one caracter"
+    }
+
+    for(let i = 0; i < length; i++){
+        const random = Math.floor(Math.random()* allowedChars.length);
+        password += allowedChars[random];
+    }
+
+    return password;
+}
+
+    const passdlength = 6;
+    const passLowerCase = true;
+    const passUpperCase = true;
+    const passSymbols = true;
+    const passNummbers = false;
+
+    let password = randomPasswordGenerator(passdlength,
+                                        passLowerCase,
+                                        passUpperCase,
+                                        passSymbols,
+                                        passNummbers);
+
+    console.log(password);
+
+</script>
