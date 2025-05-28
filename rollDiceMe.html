@@ -4,7 +4,7 @@
         <meta content="width=device-width, initial-scale=1" name="viewport">
         <meta charset="utf-8">
         <title>
-            Base
+           Roll Dice Me
         </title>
         <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
         <link href="index.css" rel="stylesheet"/>
@@ -14,7 +14,7 @@
     </head>
     <body>  
       
-        <div class="css">
+        <div class="css" id="roll">
             <h1 id="title"></h1>
             <p id="exp">formatiranje shift alt f 
                 <br>sve komande: ctrl shift p
@@ -22,8 +22,8 @@
                 <br> Ctrl q dodaje levi menu sa svim folderima i filovima
             </p>
             <label id="label" for="input">Enter a time:</label>  
-            <input id="input" type="text"> <br>
-            <button type="submit" id="submit">Submit</button>
+            <input id="input" type="number" min="1" max="6"> <br>
+            <button type="submit" id="submit" onclick="rollMoreDices()">Submit</button>
             <h2 id="result"></h2>
         </div>
  
@@ -33,10 +33,32 @@
 </script>
 <script>
 const title = document.getElementById("title");
-title.textContent = "Array";
+title.textContent = "Moj pokusaj";
 
 const exp = document.getElementById("exp");
 exp.textContent = ""
+
+const input = document.getElementById("input");
+const result = document.getElementById("result");
+const submit = document.getElementById ("submit");
+
+function rollOneDice(){
+    let num = Math.floor(Math.random()*6)+1;
+    let img = document.createElement('img');
+    img.src = `dice_images/${num}.png`;
+    console.log(img);
+    result.appendChild(img);
+
+    
+
+}
+
+function rollMoreDices(){
+    let numberOfDice = input.value;
+    for(i=0; i<numberOfDice; i++){
+        rollOneDice();
+    }
+}
 
     
 

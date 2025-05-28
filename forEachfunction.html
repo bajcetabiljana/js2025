@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta charset="utf-8">
+    <title>
+        forEach Function for Array
+    </title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="index.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="css">
+        <h1 id="title"></h1>
+        <p id="exp"></p>
+        <label id="label" for="input">Enter a time:</label>
+        <input id="input" type="text"> <br>
+        <button type="submit" id="submit">Submit</button>
+        <h2 id="result"></h2>
+    </div>
+
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+    const title = document.getElementById("title");
+    title.textContent = "array.forEach() ";
+
+    const exp = document.getElementById("exp");
+    exp.textContent = "Funkcija koja nam omogucava da mozemo na svaki elemenat u nekom nizu da izvrsimo neku funkciju preko callbacka <br> Element, index and array su argumenti te funkcije"
+
+    let nummbers = [1, 2, 3, 4, 5];
+
+    function increaseByTwo(element, index, array) {
+        array[index] = element += 2;
+
+    }
+
+    function double(element, index, array) {
+        array[index] = element * 2;
+    }
+
+    function square(element, index, array) {
+        array[index] = Math.pow(element, 2);
+    }
+
+    nummbers.forEach(increaseByTwo);
+    console.log(nummbers);
+    nummbers.forEach(double);
+    console.log(nummbers);
+    nummbers.forEach(square);
+    console.log(nummbers);
+
+    let fruits = ["banan", "apple", "kiwi", "grape", "orange"];
+
+    function displayElement(element) {
+        console.log(element);
+    }
+
+    function upperCase(element, index, array) {
+        array[index] = element.toUpperCase();
+    }
+
+    fruits.forEach(upperCase);
+    fruits.forEach(displayElement);
+
+
+</script>

@@ -110,16 +110,13 @@ button:hover {
 }
 
 #roll{
-    #img {
+    #result {
         margin-top: 20px;
         img{
             width: 7vw;
-            display: none;
+            display: inline;
         }
     
     }
     
-    h2 {
-        display: inline;
-    }
 }

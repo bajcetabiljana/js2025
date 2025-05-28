@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta content="width=device-width, initial-scale=1" name="viewport">
-        <meta charset="utf-8">
-        <title>
-            callback function 
-        </title>
-        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-        <link href="index.css" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-    </head>
-    <body>  
-      
-        <div class="css">
-            <h1 id="title"></h1>
-            <p id="exp"></p>
-            <h2 id="result"></h2>
-            <h2 id="result2"></h2>
-        </div>
- 
-    </body>
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta charset="utf-8">
+    <title>
+        callback function
+    </title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="index.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="css">
+        <h1 id="title"></h1>
+        <p id="exp"></p>
+        <h2 id="result"></h2>
+        <h2 id="result2"></h2>
+    </div>
+
+</body>
+
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 </script>
 <script>
-const title = document.getElementById("title");
-title.textContent = "callback function";
+    const title = document.getElementById("title");
+    title.textContent = "callback function";
 
-const exp = document.getElementById("exp");
-exp.textContent = "A functiont that is passed as an argument to another function! - Ako zelimo da se osiguramo da ce jedna funkcija ...koj amozda duze traje da bi se izvrsila...uvek prva da se izvrsi pre neke druge funkcije, tada zovemo callback() funkciju"
-
-    
+    const exp = document.getElementById("exp");
+    exp.textContent = "A functiont that is passed as an argument to another function! - Ako zelimo da se osiguramo da ce jedna funkcija ...koj amozda duze traje da bi se izvrsila...uvek prva da se izvrsi pre neke druge funkcije, tada zovemo callback() funkciju"
 
 
 
-first(third, 2, 5);
 
 
-function second(){
-    let result2 = document.getElementById("result2");
-    result2.textContent = "+ Second function";
-    return result2;
-  console.log(result2);
-}
+    first(third, 2, 5);
+    function sum(a, b) {
+        return a + b;
+    }
 
-function first(callback, x, y){
-    let sum = x + y;
-    let result = document.getElementById("result");
-    result.textContent = "First Function result is: " + sum;
+    c = sum(4, 5);
 
-    callback(result);
-    console.log("First function: ");
-}
+    function second() {
+        let result2 = document.getElementById("result2");
+        result2.textContent = "+ Second function";
+        console.log(result2);
+        return result2;
+    }
 
+    function first(callback, x, y) {
+        let sum = x + y;
+        let result = document.getElementById("result");
+        result.textContent = "First Function result is: " + sum;
+        console.log("First function: ");
+        callback(result);
+    }
 
-function third(){
-    
-    console.log('Third function!');
-}
+    function third() {
 
-function stop(){
-    console.log('Stop!');
-}
+        console.log('Third function!');
+    }
+
+    function stop() {
+        console.log('Stop!');
+    }
 
 </script>
