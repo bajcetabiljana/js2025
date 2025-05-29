@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="utf-8">
+        <title>
+            Map();
+        </title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link href="index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    </head>
+    <body>  
+      
+        <div class="css">
+            <h1 id="title"></h1>
+            <p id="exp">formatiranje shift alt f 
+                <br>sve komande: ctrl shift p
+                <br>lista fajlova ili da pronadje odgovarajuci file: Ctrl p 
+                <br> Ctrl q dodaje levi menu sa svim folderima i filovima
+            </p>
+            <label id="label" for="input">Enter a time:</label>  
+            <input id="input" type="text"> <br>
+            <button type="submit" id="submit">Submit</button>
+            <h2 id="result"></h2>
+        </div>
+ 
+    </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+const title = document.getElementById("title");
+title.textContent = "Map();";
+
+const exp = document.getElementById("exp");
+exp.textContent = "Accepts a callback and applies that function to each element of an array, than return a new array<br> Map and forEach funkcije su vrlo slicne. Obe se primenjuju na nekom nizu, array..<br> Razlika je sto map() stvara novi nizu<br> forEach() menja postojeci niz"
+
+    
+const numbers = [1, 2, 3, 4, 5];
+const squerNum = numbers.map(square);
+const cubeNum = numbers.map(cube);
+
+console.log(numbers);
+console.log(squerNum);
+console.log(cubeNum);
+
+function square(element){
+    return Math.pow(element, 2);
+
+}
+
+function cube(element){
+    return Math.pow(element, 3);
+}
+
+
+const students = ["Vlada", "Masa", "Iva", "Bilja"];
+const upperStudents = students.map(upperCase);
+
+
+console.log(students);
+console.log(upperStudents);
+
+function upperCase(element){
+    return element.toUpperCase();
+}
+
+const dates = ["2025-05-30", "2010-06-18", "2012-07-25"];
+const formatedDates = dates.map(formatDates);
+
+console.log(formatedDates);
+
+function formatDates(element){
+    const parts = element.split("-");
+    return `${parts[1]}/${parts[2]}/${parts[0]}`;
+}
+
+
+</script>

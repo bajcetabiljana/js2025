@@ -37,7 +37,7 @@
     const exp = document.getElementById("exp");
     exp.textContent = "Funkcija koja nam omogucava da mozemo na svaki elemenat u nekom nizu da izvrsimo neku funkciju preko callbacka <br> Element, index and array su argumenti te funkcije"
 
-    let nummbers = [1, 2, 3, 4, 5];
+    let numbers = [1, 2, 3, 4, 5];
 
     function increaseByTwo(element, index, array) {
         array[index] = element += 2;
@@ -52,12 +52,12 @@
         array[index] = Math.pow(element, 2);
     }
 
-    nummbers.forEach(increaseByTwo);
-    console.log(nummbers);
-    nummbers.forEach(double);
-    console.log(nummbers);
-    nummbers.forEach(square);
-    console.log(nummbers);
+    numbers.forEach(increaseByTwo);
+    console.log(numbers);
+    numbers.forEach(double);
+    console.log(numbers);
+    numbers.forEach(square);
+    console.log(numbers);
 
     let fruits = ["banan", "apple", "kiwi", "grape", "orange"];
 
